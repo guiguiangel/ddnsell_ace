@@ -1,0 +1,52 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ddnsell?characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#      naming:
+#        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  #  path: /var/log/tomcat/
+#  file: E:/log/ddnsell/sell.log
+#  level:
+#    com.imooc.LoggerTest: debug
+
+  jackson:
+    default-property-inclusion: non_null
+
+  freemarker:
+    request-context-attribute: request
+server:
+  port: 8083
+  context-path: /sell
+
+## 配置freemarker
+#spring:
+#  freemarker:
+#    # 设置模板后缀名
+#    suffix: .ftl
+#    # 设置文档类型
+#    content-type: text/html
+#    # 设置页面编码格式
+#    charset: UTF-8
+#    # 设置页面缓存
+#    cache: false
+#    # 设置ftl文件路径
+#    template-loader-path:
+#    - classpath:/templates
+#  # 设置静态文件路径，js,css等
+#  mvc:
+#    static-path-pattern: /static/**
+wechat:
+  appid: wx153f204f5aa9dcbe
+  appsecret: 0e4501cda0b3f11fcbe41636b1cfe297
+  redirect_url: http://test.yytop.com.cn/
+
